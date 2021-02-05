@@ -11,8 +11,10 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "deploy": "gh-pages -d dist"
   },
+  "homepage": "https://longaniza.github.io/ProyectoFinalJSBeduFinal",
   "keywords": [],
   "author": "",
   "license": "ISC",
