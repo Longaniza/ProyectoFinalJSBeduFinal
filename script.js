@@ -1,2 +1,2 @@
-import {initAppController} from "./controller/controller";
+import {initAppController} from "./controller/controller.js";
 initAppController();
