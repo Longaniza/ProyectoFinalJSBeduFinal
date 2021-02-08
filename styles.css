@@ -1,1 +1,97 @@
-/* Classes with styles */
+html {
+font-size: 62.5%;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+body {
+    box-sizing: border-box;
+    background-color: #eeeeee;
+    padding-left: 15vw;
+    padding-bottom: 50px;
+}
+h1 {
+    font-size: 2rem;
+}
+textarea {
+    resize:none;
+    width: 200px;
+    outline: none;
+    border: none;
+}
+.header-container{
+    display: inline-block;
+    width: 70vw;
+    background-color: #00adb5;
+    color: white;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+    text-align: center;
+}
+.header-container h1 {
+    font-size: 4rem;
+}
+.activities-container {
+    background-color: white;
+    display: inline-block;
+    text-align: center;
+    width: 70vw;
+}
+.active-activity {
+    text-decoration: none;
+}
+.inactive-activity {
+    text-decoration: line-through;
+}
+.activities-container__activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 25%;
+    padding-right:5%;
+    width:100%;
+}
+.activities-container__activity__content {
+    display:flex;
+    align-items:center;
+}
+.activities-container__activity__input-container {
+    display:inline-flex;
+    justify-content:center;
+}
+.activities-container__activity__text-container{
+    display:inline-block;
+    width:80%;
+}
+.activities-container__activities__text{
+    text-align:left;
+    word-break: break-word;
+}
+.add-container {
+    color: black;
+    width: 70vw;
+    margin-bottom: 50px;
+    display: inline-block;
+}
+.add-container__form {
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+}
+#text--add {
+    width: 50%;
+}
+#btn--add {
+    width: 20%;
+    height: 5vh;
+    background-color: #00adb5; /* Green */
+    border: none;
+    color: white;
+    border-radius: 12px;
+    text-align: center;
+    text-decoration: none;
+}

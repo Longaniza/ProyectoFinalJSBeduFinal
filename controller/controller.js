@@ -1,13 +1,20 @@
+import {getToDoListModel,addItemModel,deleteItemModel,toggleStatusOfItem,initModel} from '../model/model.js';
+import {renderDeleteActivityView,renderNewActivityView,rendertoggleStatusOfItemView,initView} from '../view/renderMethods.js';
 export function initAppController(){
-   //Everything related to start the app
-   console.log('The app Starts');
+    initModel();
+    initView(getToDoListModel());
 }
 export function renderNewActivityController(activity){
-    //Everything related to render a new actity
+    renderNewActivityView(addItemModel(activity));
+    console.log(getToDoListModel());
 }
 export function renderDeleteActivityController(divActivity){
-    //Everything related to render a deleted actity
+    renderDeleteActivityView(divActivity);
+    deleteItemModel(divActivity.dataset.id);
+    console.log(getToDoListModel());
 }
 export function rendertoggleStatusOfItemController(divActivity){
-    // //Everything related to toggle the status of an activity
+    rendertoggleStatusOfItemView(divActivity)
+    toggleStatusOfItem(divActivity.dataset.id);
+    console.log(getToDoListModel());
 }
