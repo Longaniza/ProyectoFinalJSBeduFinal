@@ -38,7 +38,6 @@ export function renderNewActivityView(activity) {
 export function renderDeleteActivityView(divActivity) {
     divActivity.parentNode.removeChild(divActivity);
 }
-
 export function rendertoggleStatusOfItemView(divActivity) {
     const divActivityStatus = divActivity.dataset.status;
     const h1 = divActivity.querySelector('.activities-container__activities__text');
