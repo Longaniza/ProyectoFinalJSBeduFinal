@@ -1,22 +1,22 @@
-import initListeners from "./EListeners";
-export function initView(activitiesList){
+import initListeners from "./EListeners.js";
+export function initView(activitiesList) {
     //set the initial part of the html
-    initListeners();
 }
-function renderActivity(activity) {
+function renderActivity(task) {
     //render an activity based on an activity object
     //return the created html
 }
-export function renderAllActivitiesView(activitiesList){
+export function renderAllActivitiesView(activitiesList) {
     //traverse in the todo list and insert html based on each activity
 }
-export function renderNewActivityView(activity){
-    //render an added activity
+export function renderNewActivityView(activityView) {
+    //render an added activity  
 }
-export function renderDeleteActivityView(divActivity){
+export function renderDeleteActivityView(divActivity) {
     //remove an item based on the div that represents the activity
     divActivity.parentNode.removeChild(divActivity);
 }
-export function rendertoggleStatusOfItemView(divActivity){
-     //cross a line in  an item based on the div that represents the activity
+export function rendertoggleStatusOfItemView(divActivity) {
+    //cross a line in  an item based on the div that represents the activity
 }
+
