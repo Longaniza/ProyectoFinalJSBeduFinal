@@ -1,5 +1,5 @@
 import initListeners from "./EListeners";
-export function initView(){
+export function initView(activitiesList){
     //set the initial part of the html
     initListeners();
 }
@@ -7,7 +7,7 @@ function renderActivity(activity) {
     //render an activity based on an activity object
     //return the created html
 }
-export function renderAllActivitiesView(array){
+export function renderAllActivitiesView(activitiesList){
     //traverse in the todo list and insert html based on each activity
 }
 export function renderNewActivityView(activity){
