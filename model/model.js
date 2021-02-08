@@ -1,22 +1,41 @@
-let toDoList; // The array that will contain the info
+let toDoList;
 function initModel(){
-    //set the array
+    toDoList = JSON.parse(localStorage.getItem('todoList')) || [];
 }
 function getToDoListModel(){
-    //return the array
+    return JSON.parse(JSON.stringify(toDoList));
 }
 function cuid(){
-    //return a unique id
+    return Math.floor(Math.random() * Date.now()).toString();
 }
 function addItemModel(activity){
-        //add an item to the array
-        //return the new activity object
+    const newtoDoList = [...toDoList];
+    const newActivity = {id:cuid(),activity:activity.trimStart(),status:"active"};
+    newtoDoList.push(newActivity);
+    toDoList = newtoDoList;
+    localStorage.setItem('todoList',JSON.stringify(toDoList));
+    return newActivity;
 }
 function toggleStatusOfItem(idToSet){
-    //change the status of an item based on a id
-    // update the local storage
+    toDoList = toDoList.map(elem => {
+        if(elem.id === idToSet) {
+            switch(elem.status){
+                case 'active':
+                    elem.status = 'inactive';
+                    break;
+                case 'inactive':
+                    elem.status = 'active';
+                    break;
+                default:
+                    break;
+            }
+        }
+        return elem;
+    });
+    localStorage.setItem('todoList',JSON.stringify(toDoList));
 }
 function deleteItemModel(idToDelete){
-    //delete an item based on id
+    toDoList = toDoList.filter(elem => elem.id !== idToDelete);
+    localStorage.setItem('todoList',JSON.stringify(toDoList));
 }
 export {getToDoListModel,addItemModel,deleteItemModel,toggleStatusOfItem,initModel};
